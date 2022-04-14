@@ -1,6 +1,14 @@
 function findShortestString(arr) {
-  // type your code here
+  let shortest = arr[0]
+  arr.map((str) => {
+    if(str.length < shortest.length){
+      shortest = str
+    } 
+  })
+  return shortest;
 }
+
+// console.log(findShortestString(['aaa', 'a', 'bb', 'ccc']))
 
 if (require.main === module) {
   // add your own tests in here
@@ -20,7 +28,7 @@ if (require.main === module) {
   // BENCHMARK HERE
 }
 
-module.exports = findShortestString;
+// module.exports = findShortestString;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
